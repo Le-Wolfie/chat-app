@@ -19,10 +19,8 @@ const ItemList = ({ children, title, action }: Props) => {
       })}
     >
       <div className='flex justify-between items-center mb-4'>
-        <h1 className='text-2xl font-semibold tracking-tight'>
-          {title}
-          {action ? action : null}
-        </h1>
+        <h1 className='text-2xl font-semibold tracking-tight'>{title}</h1>
+        {action ? action : null}
       </div>
       <div className='w-full h-full flex flex-col items-center justify-start gap-2'>
         {children}
