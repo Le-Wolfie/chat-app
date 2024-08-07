@@ -46,7 +46,10 @@ const handleClerkWebhook = httpAction(async (ctx, req) => {
       }
     case "user.updated":
       await ctx.runMutation(internal.user.create, {
-        username: `${event.data.first_name} ${event.data.last_name}`,
+        // if the user's last name is empty, we'll just use the first name
+        username: event.data.last_name
+          ? `${event.data.first_name} ${event.data.last_name}`
+          : `${event.data.first_name}`,
         imageUrl: event.data.image_url,
         clerkId: event.data.id,
         email: event.data.email_addresses[0].email_address,
