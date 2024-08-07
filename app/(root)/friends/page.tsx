@@ -32,7 +32,7 @@ const FriendsPage = () => {
             })
           )
         ) : (
-          <Loader2 className='w-8 h-8' />
+          <Loader2 className='animate-spin w-8 h-8' />
         )}
       </ItemList>
       <ConversationFallback />
