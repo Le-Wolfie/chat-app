@@ -24,9 +24,12 @@ const ConversationsLayout = ({ children }: Props) => {
                 <div className='w-full' key={conversation.conversation._id}>
                   {conversation.conversation.isGroup ? null : ( //WIP
                     <DMConversationItem
+                      key={conversation.conversation._id}
                       id={conversation.conversation._id}
                       imageUrl={conversation.otherMember?.imageUrl || ""}
                       username={conversation.otherMember?.username || ""}
+                      lastMessageContent={conversation.lastMessage?.content}
+                      lastMessageSender={conversation.lastMessage?.sender}
                     />
                   )}
                 </div>
