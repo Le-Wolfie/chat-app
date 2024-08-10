@@ -92,6 +92,7 @@ const ChatInput = () => {
                       onClick={handleInputChange}
                       placeholder='Type a message...'
                       className='min-h-full w-full resize-none border-0 outline-0 bg-card text-card-foreground placeholder:text-muted-foreground p-1.5'
+                      ref={textAreaRef}
                     />
                   </FormControl>
                   <FormMessage />
