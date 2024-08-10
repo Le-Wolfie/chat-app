@@ -32,7 +32,7 @@ export const create = mutation({
       .unique();
 
     if (!receiver) {
-      throw new ConvexError("Receiver not found");
+      throw new ConvexError("User not found");
     }
 
     const existingRequest = await ctx.db
