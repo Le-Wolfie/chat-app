@@ -16,7 +16,7 @@ const FriendsPage = () => {
         {requests ? (
           requests.length === 0 ? (
             <p className='w-full h-full flex items-center justify-center'>
-              You have no friends yet, add some!
+              You have no friend requests!
             </p>
           ) : (
             requests.map((request) => {
