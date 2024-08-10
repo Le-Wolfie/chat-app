@@ -6,19 +6,19 @@ export const useMutationState = (mutation: any) => {
 
   const mutationFn = useMutation(mutation);
 
-  const mutate = (payload: any) => {
+  const mutate = async (payload: any) => {
     setPending(true);
 
-    return mutationFn(payload)
-      .then((res) => {
+    try {
+      try {
+        const res = await mutationFn(payload);
         return res;
-      })
-      .catch((err) => {
+      } catch (err) {
         throw err;
-      })
-      .finally(() => {
-        setPending(false);
-      });
+      }
+    } finally {
+      setPending(false);
+    }
   };
 
   return {
