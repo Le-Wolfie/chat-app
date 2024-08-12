@@ -132,6 +132,28 @@ export const conversation = query({
         },
         otherMembers: null,
       };
+    } else {
+      const otherMembers = await Promise.all(
+        allConversationMemberships
+          .filter((membership) => membership.memberId !== currentUser._id)
+          .map(async (membership) => {
+            const member = await ctx.db.get(membership.memberId);
+
+            if (!member) {
+              throw new ConvexError("Member not found");
+            }
+
+            return {
+              username: member.username,
+            };
+          })
+      );
+
+      return {
+        ...conversation,
+        otherMember: null,
+        otherMembers,
+      };
     }
   },
 });
