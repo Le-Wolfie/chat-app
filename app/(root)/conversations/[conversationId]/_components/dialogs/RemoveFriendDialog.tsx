@@ -48,7 +48,7 @@ const RemoveFriendDialog = ({ conversationId, open, setOpen }: Props) => {
           </AlertDialogTitle>
           <AlertDialogDescription>
             This action cannot be undone. All messages will be deleted and you
-            won't be able to send messages to this user anymore.
+            won&apos;t be able to send messages to this user anymore.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>

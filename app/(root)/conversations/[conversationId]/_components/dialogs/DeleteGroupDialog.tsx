@@ -50,7 +50,7 @@ const DeleteGroupDialog = ({ conversationId, open, setOpen }: Props) => {
           </AlertDialogTitle>
           <AlertDialogDescription>
             This action cannot be undone. All messages will be deleted and you
-            won't be able to send messages to this group anymore.
+            won&apos;t be able to send messages to this group anymore.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
