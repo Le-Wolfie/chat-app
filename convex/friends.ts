@@ -2,7 +2,7 @@ import { ConvexError, v } from "convex/values";
 import { mutation, query } from "./_generated/server";
 import { getUserByClerkId } from "./_utils";
 
-export const conversation = query({
+export const get = query({
   args: {
     id: v.id("conversations"),
   },
