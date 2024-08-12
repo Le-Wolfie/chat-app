@@ -49,8 +49,9 @@ const LeaveGroupDialog = ({ conversationId, open, setOpen }: Props) => {
             Are you sure you want to leave this group?
           </AlertDialogTitle>
           <AlertDialogDescription>
-            This action cannot be undone. Previous messages won't be visible and
-            you won&apos;t be able to send messages to this group anymore.
+            This action cannot be undone. Previous messages won&apos;t be
+            visible and you won&apos;t be able to send messages to this group
+            anymore.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
